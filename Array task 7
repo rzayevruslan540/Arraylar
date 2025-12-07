@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+void fillX(int X[], int Y[], int n){
+    for(int i=0;i<n;i++)
+        X[i] = Y[i] * Y[i];
+}
+
+int main(){
+    int Y[5]={1,2,3,4,5};
+    int X[5];
+
+    fillX(X,Y,5);
+
+    for(int i=0;i<5;i++) cout<<X[i]<<" ";
+}
