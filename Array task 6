@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int sumInRange(int a[], int n, int b, int c){
+    int sum=0;
+    for(int i=0;i<n;i++){
+        if(b < a[i] && a[i] < c)
+            sum+=a[i];
+    }
+    return sum;
+}
+
+int main(){
+    int a[10]={5,1,9,3,7,4,8,2,6,10};
+    int b,c;
+    cin >> b >> c;
+    cout << sumInRange(a,10,b,c);
+}
