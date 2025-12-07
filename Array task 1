@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void sortDescending(int a[], int n){
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i] < a[j]){
+                int t=a[i];
+                a[i]=a[j];
+                a[j]=t;
+            }
+        }
+    }
+}
+
+int main(){
+    int a[] = {5,1,9,3,7};
+    int n = 5;
+
+    sortDescending(a,n);
+
+    for(int i=0;i<n;i++) cout << a[i] << " ";
+}
