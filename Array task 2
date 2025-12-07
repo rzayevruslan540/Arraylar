@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int smallestPositive(int a[], int n){
+    int mini = 1e9;
+    for(int i=0;i<n;i++){
+        if(a[i] > 0 && a[i] < mini)
+            mini = a[i];
+    }
+    return mini;
+}
+
+int main(){
+    int a[] = {11,0,-3,2,4,-6,3,-2};
+    int n = 8;
+    cout << smallestPositive(a,n);
+}
